@@ -15,6 +15,11 @@ An optional third page would display all recipes in the cookbook with ingredient
 
 ![2024-09-14_121549_3](https://github.com/user-attachments/assets/9cadd08d-15f6-4a4f-9660-c9788155ac3b)
 
+## Key Features
+- Realtime collaberation between users.
+- Bot protection via authentification servers.
+- Well styled pages that are pleasing to look at and use.
+
 ## Technologies
 
 - **HTML** - Use correct HTML structure to display three seperate HTML pages.
