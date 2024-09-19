@@ -6,4 +6,4 @@ Not sure about the back and forth between GitHub and VScode - seems a bit finnic
 
 09/19 - 
 Commands to remember:
-➜  ssh -i <key location> ubuntu@abloo-web260.click
+➜  ssh -i (key location) ubuntu@abloo-web260.click
