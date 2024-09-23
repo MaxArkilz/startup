@@ -29,3 +29,25 @@ An optional third page would display all recipes in the cookbook with ingredient
 - **Authentication** - Use Auth0 to authenticate users and prevent bot traffic.
 - **Database Data** - Store shopping list data.
 - **WebSocket Data** - Allow users to see other's edits in the meal plan and during shopping.
+
+
+## Implementation
+HTML pages for each component of your application
+
+Proper use of HTML tags including BODY, NAV, MAIN, HEADER, FOOTER
+
+Links between pages as necessary
+
+Application textual content
+
+Placeholder for 3rd party service calls
+
+Application images
+
+Login placeholder, including user name display
+
+Database data placeholder showing content stored in the database
+
+WebSocket data placeholder showing where realtime communication will go
+
+
