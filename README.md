@@ -48,7 +48,7 @@ An optional third page would display all recipes in the cookbook with ingredient
   - *Login and Signup page placeholders*
 - Database data placeholder showing content stored in the database
   - *Database placeholder on Meal Plan and Cookbook page. Login page will also pull and push from database*
-
-WebSocket data placeholder showing where realtime communication will go
+- WebSocket data placeholder showing where realtime communication will go
+  - *Meal Plan page contains placeholder for WebSocket updates*
 
 
