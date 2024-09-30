@@ -13,7 +13,7 @@ body {
 header, main, footer {
     width: 66.66%;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(163, 149, 149, 0.8);
     padding: 20px;
     margin-bottom: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.65);
