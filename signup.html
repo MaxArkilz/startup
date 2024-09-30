@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="loginStyle.css">
     <title>Signup</title>
 </head>
 <body>
-    <header>
-        <h1>Please Signup Below</h1>
-    </header>
-    <main>
-        <div>
+        <div class="loginContainer">
+        <h1>Signup</h1>
+    <form>
+        <div class="inputGroup">
             <label for="username">Username: </label>
             <input type="text" id="username" placeholder="Enter your username" required>
+        </div>
+        <div class="inputGroup">
             <label for="password">Password: </label>
             <input type="password" id="password" placeholder="Enter your password" required>
+        </div>
+        <div class="inputGroup">
             <label for="email">Email: </label>
             <input type="text" id="email" placeholder="myhandle@email.com" required>
             <a href="index.html">
@@ -25,10 +28,7 @@
         <div>
             <p>Login info will be pushed into database.</p>
         </div>
-    </main>
-    <footer>
-        <hr>
-        <p>Check out the dev notes on GitHub <a href="https://github.com/MaxArkilz/startup">here</a></p>
-    </footer>
+    </form>
+    </div>
 </body>
 </html>
