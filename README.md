@@ -32,22 +32,23 @@ An optional third page would display all recipes in the cookbook with ingredient
 
 
 ## Implementation
-HTML pages for each component of your application
-
-Proper use of HTML tags including BODY, NAV, MAIN, HEADER, FOOTER
-
-Links between pages as necessary
-
-Application textual content
-
-Placeholder for 3rd party service calls
-
-Application images
-
-Login placeholder, including user name display
-
-Database data placeholder showing content stored in the database
-
-WebSocket data placeholder showing where realtime communication will go
+- HTML pages for each component of your application
+  - *Completed*
+- Proper use of HTML tags including BODY, NAV, MAIN, HEADER, FOOTER
+  - *Completed*
+- Links between pages as necessary
+  - *Completed - Home, Meal Plan, Shopping, Cookbook, and Login Links*
+- Application textual content
+  - *Text on each page describing what page will do*
+- Placeholder for 3rd party service calls
+  - *Nutrition quotes placeholder on home page*
+- Application images
+  - *Background image uploaded, some basic CSS to make page readable*
+- Login placeholder, including user name display
+  - *Login and Signup page placeholders*
+- Database data placeholder showing content stored in the database
+  - *Database placeholder on Meal Plan and Cookbook page. Login page will also pull and push from database*
+- WebSocket data placeholder showing where realtime communication will go
+  - *Meal Plan page contains placeholder for WebSocket updates*
 
 
