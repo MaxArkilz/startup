@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="cookStyle.css">
     <title>Cookbook</title>
     <link rel="icon" href="siteImages/resippyIcon-tabSize.png">
 </head>
@@ -24,26 +25,62 @@
     
     <main>
         <div>
-            <p>Welcome to the cookbook, where you can look through all the avalible recipes and add your own.</p>
+            <h2>Beef Stew</h2>
+            <hr id="titleLine">
         </div>
-        <div id="Ingredients">
-            <table>
-                <tr>
-                    <th>Ingredients</th>
-                    <th></th>
-                </tr>
-                <tr class="servingSize">
-                    <td>6</td>
-                    <td>servings</td>
-                </tr>
-                <tr>
-                    <td>2 lbs</td>
-                    <td>stew beef</td>
-                </tr>
-            </table>
-        </div>
-        <div id="Instructions">
-            <p>This portion will appear beside the ingredients and allow the user to read instructions for their recipe so they can have everything consolidated in one place. Data will be pulled from text database and formatted for readablilty.</p>
+        <div id="recipeContainer">
+            <div id="ingredients">
+                <table>
+                    <tr>
+                        <th>Ingredients</th>
+                        <th></th>
+                    </tr>
+                    <tr id="servingSize">
+                        <td>6</td>
+                        <td>servings</td>
+                    </tr>
+                    <tr> <td>2 lbs</td> <td>stew beef</td> </tr> 
+                    <tr> <td>1/3 tsp</td> <td>garlic salt, pepper</td> </tr> 
+                    <tr> <td>1/4 cup</td> <td>flour</td> </tr> 
+                    <tr> <td>3 TBSP</td> <td>olive oil</td> </tr> 
+                    <tr> <td>2 TBSP</td> <td>butter</td> </tr> 
+                    <tr> <td>1</td> <td>onion, diced</td> </tr> 
+                    <tr> <td>3 cloves</td> <td>garlic, minced</td> </tr> 
+                    <tr> <td>1 TBSP</td> <td>red wine vinegar</td> </tr> 
+                    <tr> <td>4 cups</td> <td>beef broth</td> </tr> 
+                    <tr> <td>2 tsp</td> <td>beef bouillon</td> </tr> 
+                    <tr> <td>1 1/2 TBSP</td> <td>worcestershire</td> </tr> 
+                    <tr> <td>2 TBSP</td> <td>tomato paste</td> </tr> 
+                    <tr> <td>4</td> <td>carrots, sliced</td> </tr> 
+                    <tr> <td>1 lb</td> <td>yukon gold potatoes</td> </tr> 
+                    <tr> <td>2</td> <td>bay leaves</td> </tr> 
+                    <tr> <td>2 tsp</td> <td>rosemary</td> </tr> 
+                    <tr> <td>1 cup</td> <td>frozen peas</td> </tr>
+                </table>
+            </div>
+            <div  id="instructions">
+                <p><b>- Chop:</b> beef (if not already cut), onion, carrots, and potatoes. Set aside. </p>
+                <p>
+                    <b>- Sear meat:</b> heat olive oil in a skillet over medium-high heat. 
+                    Sprinkle beef with garlic salt + pepper. Toss to combine. Coat with flour. 
+                    Once oil is hot, sear each piece of meat for 45 seconds front & back. Transfer to crockpot.
+                </p>
+                <p>
+                    <b>- Sauté veggies:</b> to now-empty skillet, melt butter & sauté onions + garlic for about 5 min. 
+                    Transfer to crockpot.
+                </p>
+                <p>
+                    <b>- Add ingredients:</b> to the crockpot, add everything but the frozen peas 
+                    (red wine vinegar + beef broth + bouillon + worcestershire + tomato paste + carrots + potatoes + bay leaves + rosemary).  
+                </p>
+                <p><b>- Cook</b> on LOW for 7-8 hours or HIGH for 3-4 hours.</p>
+                <p>
+                    <b>- To thicken:</b> can make a cornstarch slurry (3 TBSP cornstarch + 3 TBSP water) 
+                    and add in the last 15 minutes of cooking. Optional but I recommend it.
+                </p>
+                <p><b>- Add peas:</b> also in the last 15 minutes of cooking. Stir. </p>
+                <p><b>- Serve:</b> and enjoy</p>
+            </div>
         </div>
     </main>
         

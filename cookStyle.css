@@ -1,0 +1,32 @@
+#servingSize {
+    font-style: italic;
+    font-weight: bold;
+}
+
+#recipeContainer {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1200px;
+}
+
+#ingredients table {
+    flex: 0 0 40%;
+    background-color: rgb(227, 210, 210);
+    border-collapse: collapse;
+}
+
+#ingredients th, #ingredients td {
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+#ingredients th {
+    background-color: rgb(155, 143, 143);
+}
+
+#instructions {
+    flex: 0 0 40%;
+}
+
+
+
