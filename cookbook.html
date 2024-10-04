@@ -6,14 +6,20 @@
     <link rel="stylesheet" href="mystyle.css">
     <link rel="stylesheet" href="cookStyle.css">
     <title>Cookbook</title>
-    <link rel="icon" href="siteImages/resippyIcon-tabSize.png">
+    <link rel="icon" href="siteImages/resippyIcon-tabSize-whiteBackground.png">
 </head>
 
 <body>
     <header>
         <img class ="logo" src="siteImages/resippyIcon.png" alt="site logo">
-        <nav class="siteNavigation">
-            <ul>
+        <nav>
+            <input type="checkbox" id="menuToggle" class="menuToggle">
+            <label for="menuToggle" class="menuIcon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul  class="siteNavigation">
             <li><a href="index.html">Home</a></li>
             <li><a href="meal_plan.html">Meal Plan</a></li>
             <li><a href="cookbook.html">Cookbook</a></li>
@@ -25,7 +31,72 @@
     
     <main>
         <div>
-            <h2>Beef Stew</h2>
+            <button id="recipeToggle">Beef Stew</button>
+            <!--change button to checkbox-->
+            <div id="allRecipes">
+                <ul>
+                    <li>Crepes (fancy)</li> 
+                    <li>French Toast</li> 
+                    <li>French Toast (Kneaders Overnight)</li> 
+                    <li>German Pancakes + Butter Syrup</li> 
+                    <li>Masa Harina Blueberry Pancakes</li> 
+                    <li>Oatmeal / Overnight Oats</li> 
+                    <li>Whole Wheat Waffles</li> 
+                    <li>Random Egg Meal Ideas</li> 
+                    <li>Random Sandwich Ideas</li> 
+                    <li>Random Quesadilla Ideas</li> 
+                    <li>Baked Potatoes</li> 
+                    <li>Chicken Divan</li> 
+                    <li>Gyros</li> 
+                    <li>Italian Chicken Sauce (Slow Cooker)</li> 
+                    <li>Potato Salad</li> 
+                    <li>Quinoa Bowls</li> 
+                    <li>Sourdough Sliders (Grilled)</li> 
+                    <li>Arepas de Venezuela</li> 
+                    <li>Enchiladas</li> 
+                    <li>Fish Tacos</li> 
+                    <li>Smothered Chicken Burritos</li> 
+                    <li>Tacos</li> 
+                    <li>Alfredo (Light)</li> 
+                    <li>Alfredo (Thicc)</li> 
+                    <li>Baked Mac N' Cheese</li> 
+                    <li>Beef Stroganoff</li> 
+                    <li>Chicken Parmesan</li> 
+                    <li>Linguine and Clam Sauce</li> 
+                    <li>Macaroni Salad</li> 
+                    <li>Marinara Sauce (Spaghetti)</li> 
+                    <li>Butter Chicken (slow cooker opt.)</li> 
+                    <li>Cupbop Spoof</li> <li>Curry (Chicken)</li> 
+                    <li>Fried Rice (Bloomquist)</li> 
+                    <li>Pad Kra Pow</li> 
+                    <li>Peanut Thai Noodles</li> 
+                    <li>Slow Cooker Curry (Mom's Version)</li> 
+                    <li>Chicken + Wild Rice Soup</li> 
+                    <li>Chicken Noodle Soup</li> 
+                    <li>Clam Chowder</li> 
+                    <li>Corn Chowder</li> 
+                    <li>Homemade Chili</li> 
+                    <li>Slow Cooker Beef Stew</li> 
+                    <li>French Bread</li> 
+                    <li>Gingerbread</li> 
+                    <li>Whole Wheat Bread (or scones)</li> 
+                    <li>Coconut Brownies (Ema)</li> 
+                    <li>"Expresso" Brownies</li> 
+                    <li>Microwave Mug Brownies (Leah + Abe)</li> 
+                    <li>Truffle Brownies (Martha Stewart)</li> 
+                    <li>Chocolate Chip Cookies (Mom)</li> 
+                    <li>Chocolate Crinkle Cookies</li> 
+                    <li>No-Bake Cookies (Mom)</li> 
+                    <li>Peanut Butter Chocolate Chip Cookies</li> 
+                    <li>Pumpkin Oatmeal Chocolate Chip Cookies</li> 
+                    <li>Outrageous Cookies (Abe)</li> 
+                    <li>Chocolate Coconut Poke Cake</li> 
+                    <li>Sophie Bloomquist's Chocolate Cake</li> 
+                    <li>Tres Leches Cake</li> 
+                    <li>Oreo Truffles (Sam)</li> 
+                    <li>Rice Crispy PB Chocolate Bar Things</li>
+                </ul>
+            </div>
             <hr id="titleLine">
         </div>
         <div id="recipeContainer">

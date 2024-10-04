@@ -28,5 +28,41 @@
     flex: 0 0 40%;
 }
 
+#allRecipes {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: rgb(227, 210, 210);
+    padding: 20px;
+    border-radius: 10px;
+}
 
+#allRecipes li {
+    display: block;
+    margin: 0;
+    padding: 50px;
+    font-size: x-large;
+}
+
+#recipeToggle {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+#recipeToggle:hover {
+    color: #b1aaaa;
+    cursor: pointer;
+}
+
+#recipeToggle:checked ~ #allRecipes {
+    display: block;
+}
 
