@@ -30,39 +30,50 @@
 
 #allRecipes {
     display: none;
-    flex-direction: column;
     position: absolute;
-    top: 100%;
-    left: 0;
-    width: 50%;
-    height: 100vh;
-    background-color: rgb(227, 210, 210);
+    transform: translateY(-2%);
+    width: 300px;
+    background-color: rgba(227, 210, 210, 0.9);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0, 0.3);
+    z-index: 1000;
 }
 
 #allRecipes li {
     display: block;
     margin: 0;
-    padding: 50px;
-    font-size: x-large;
+    font-size: small;
 }
 
-#recipeToggle {
-    background: none;
-    border: none;
-    padding: 0;
-    font: inherit;
-    font-weight: bold;
-    font-size: x-large;
-}
-
-#recipeToggle:hover {
+#allRecipes li:hover {
     color: #b1aaaa;
     cursor: pointer;
 }
 
-#recipeToggle:checked ~ #allRecipes {
+#allRecipes li h3, #allRecipes li h4 {
+    color: #000;
+    cursor: default;
+}
+
+.recipeToggle {
+    display: none;
+}
+
+.recipeLabel {
+    display: inline-block;
+}
+
+.recipeLabel:hover {
+    color: #b1aaaa;
+    cursor: pointer;
+}
+
+.recipeLabel:hover + #allRecipes {
+    display: block;
+}
+
+#allRecipes:hover {
     display: block;
 }
 
