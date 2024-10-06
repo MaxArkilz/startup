@@ -33,6 +33,7 @@
     position: absolute;
     transform: translateY(-2%);
     width: 300px;
+    margin-top: 20px;
     background-color: rgba(227, 210, 210, 0.9);
     padding: 20px;
     border-radius: 15px;
