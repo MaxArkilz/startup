@@ -31,7 +31,8 @@ An optional third page would display all recipes in the cookbook with ingredient
 - **WebSocket Data** - Allow users to see other's edits in the meal plan and during shopping.
 
 
-## Implementation
+## Implementation 
+### HTML
 - HTML pages for each component of your application
   - *Completed*
 - Proper use of HTML tags including BODY, NAV, MAIN, HEADER, FOOTER
@@ -50,5 +51,20 @@ An optional third page would display all recipes in the cookbook with ingredient
   - *Database placeholder on Meal Plan and Cookbook page. Login page will also pull and push from database*
 - WebSocket data placeholder showing where realtime communication will go
   - *Meal Plan page contains placeholder for WebSocket updates*
+ 
+### CSS
+
+- Properly styled CSS header, footer, and main content body
+  - styled properly, some JavaScript needs to be implemented to hide header when scrolling
+- Properly styled CSS navigation elements
+  - CSS stylized <ul> elements, as per web standard. Changes colors and pointer properly.
+- Responsive to window resizing
+  - *completed*
+- Properly styled CSS application elements
+  - Application placeholders on each page
+- Properly styled CSS application text content
+  - in progress
+- Properly styled CSS application images
+  - *completed*
 
 
