@@ -1,0 +1,60 @@
+.calendar {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    font: verdana;
+    margin-left: 2vw;
+}
+
+.calendarHeader {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.calendarGrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.day, .calendarGrid div {
+    display: flex;
+    border: 1px solid #ddd;
+    aspect-ratio: 1;
+}
+
+.day {
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.calendarGrid div:hover {
+    background-color: #b1aaaa;
+    cursor: pointer;
+}
+
+#recipeList {
+    list-style: none;
+}
+
+#recipeList div {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+#recipeList div li {
+    padding: 10px;
+    background-color: #2d2d2d;
+    border-radius: 10px;
+    margin: 5px;
+    color: white;
+    display: inline-block;
+}
