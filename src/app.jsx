@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
+import { NavLink, Routes } from 'react-router-dom';
 import { BrowserRouter, Route } from "react-router-dom";
 import {About} from "./about/about";
 import {MealPlan} from "./mealPlan/mealplan";
@@ -14,11 +15,11 @@ export default function App() {
             <>
             <nav>
                 <ul>
-                    <li><Link to="/">Login</Link></li>
-                    <li><Link to="/mealplan">Meal Plan</Link></li>
-                    <li><Link to="/cookbook">Cookbook</Link></li>
-                    <li><Link to="/shopping">Shopping List</Link></li>
-                    <li><Link to="/about">Home</Link></li>
+                    <li><NavLink className='navbar' to="/">Login</NavLink></li>
+                    <li><NavLink className='navbar' to="/mealplan">Meal Plan</NavLink></li>
+                    <li><NavLink className='navbar' to="/cookbook">Cookbook</NavLink></li>
+                    <li><NavLink className='navbar' to="/shopping">Shopping List</NavLink></li>
+                    <li><NavLink className='navbar' to="/about">Home</NavLink></li>
                 </ul>
             </nav>
             <Routes>
