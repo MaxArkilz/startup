@@ -1,34 +1,40 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
-import { Route } from "react-router-dom"
-import {Home} from "./pages/Home"
-import {MealPlan} from "./pages/MealPlan"
-import {Cookbook} from "./pages/Cookbook"
-import {Shopping} from "./pages/Shopping"
-import {Login} from "./pages/Login"
+import { BrowserRouter, Route } from "react-router-dom";
+import {About} from "./about/about";
+import {MealPlan} from "./mealPlan/mealplan";
+import {Cookbook} from "./cookbook/cookbook";
+import {Shopping} from "./shopping/shopping";
+import {Login} from "./login/login";
 
-function App() {
+export default function App() {
     return (
-        <>
-        <nav>
-            <ul>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/planning">Meal Plan</Link></li>
-                <li><Link to="/cooking">Cookbook</Link></li>
-                <li><Link to="/shopping">Shopping List</Link></li>
-                <li><Link to="/login">Login</Link></li>
-            </ul>
-        </nav>
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/planning" element={<MealPlan />} />
-            <Route path="/cooking" element={<Cookbook />} />
-            <Route path="/shopping" element={<Shopping/>} />
-            <Route path="/login" element={<Login/>} />
-        </Routes>
-        </>
+        <BrowserRouter>
+            <>
+            <nav>
+                <ul>
+                    <li><Link to="/">Login</Link></li>
+                    <li><Link to="/mealplan">Meal Plan</Link></li>
+                    <li><Link to="/cookbook">Cookbook</Link></li>
+                    <li><Link to="/shopping">Shopping List</Link></li>
+                    <li><Link to="/about">Home</Link></li>
+                </ul>
+            </nav>
+            <Routes>
+                <Route path="/" element={<Login />} />
+                <Route path="/mealplan" element={<MealPlan />} />
+                <Route path="/cookbook" element={<Cookbook />} />
+                <Route path="/shopping" element={<Shopping/>} />
+                <Route path="/about" element={<About/>} />
+                <Route path='*' element={<NotFound />} />
+            </Routes>
+            </>
+        </BrowserRouter>
     )
 }
 
-export default App
+function NotFound() {
+    return <main className='container-fluid bg-secondary text-center'>404: Return to sender. Address unknown.</main>;
+  }
+
