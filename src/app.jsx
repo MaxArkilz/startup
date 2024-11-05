@@ -1,3 +1,6 @@
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './app.css';
 import { Route } from "react-router-dom"
 import {Home} from "./pages/Home"
 import {MealPlan} from "./pages/MealPlan"
