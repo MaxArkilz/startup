@@ -2,8 +2,8 @@ import React from 'react';
 
 export function Shopping() {
   return (
-    <main className='container-fluid bg-secondary text-center'>
-      <div>login displayed here</div>
+    <main>
+      <div>SHOPPING LIST</div>
     </main>
   );
 }
