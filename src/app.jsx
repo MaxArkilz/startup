@@ -10,19 +10,37 @@ import {Shopping} from "./shopping/shopping";
 import {Login} from "./login/login";
 import { Recipe } from './cookbook/recipes/recipe';
 import { Signup } from './signup/signup';
+import logo from './resippyIcon.png';
 
 export default function App() {
     return (
         <BrowserRouter>
             <>
-            <nav className='siteNavigation'>
-                <ul>
-                    <li><NavLink className='navbar' to="/mealplan">Meal Plan</NavLink></li>
-                    <li><NavLink className='navbar' to="/cookbook">Cookbook</NavLink></li>
-                    <li><NavLink className='navbar' to="/shopping">Shopping List</NavLink></li>
-                    <li><NavLink className='navbar' to="/about">About</NavLink></li>
-                </ul>
-            </nav>
+            <header>
+                <div>
+                    <NavLink to="/" className='logo'>
+                        <img src={logo} className='logo' />
+                    </NavLink>
+                </div>
+                <nav>
+                    <input type="checkbox" id="menuToggle" className="menuToggle" />
+                    <label htmlFor="menuToggle" className="menuIcon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    <ul className='siteNavigation'>
+                    
+                        <li><NavLink className='navbar' to="/mealplan">Meal Plan</NavLink></li>
+                        <li><NavLink className='navbar' to="/cookbook">Cookbook</NavLink></li>
+                        <li><NavLink className='navbar' to="/shopping">Shopping List</NavLink></li>
+                        <li><NavLink className='navbar' to="/about">About</NavLink></li>
+                        <li>
+                            <NavLink className='loginLink' to='/'><button className='loginButton'>Login</button></NavLink>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
             <Routes>
                 <Route path="/" element={<Login />} />
                 <Route path="/mealplan" element={<MealPlan />} />

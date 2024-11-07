@@ -2,7 +2,7 @@ import React from 'react';
 
 export function Signup() {
   return (
-    <main className='container-fluid bg-secondary text-center'>
+    <main>
       <body>
         <div className="loginContainer">
         <h1>Signup</h1>
@@ -15,7 +15,7 @@ export function Signup() {
         </div>
         <div className="inputGroup">
             <input type="text" id="email" placeholder="myhandle@email.com" required />
-            <a href="index.html">
+            <a href="about">
             <button type="button" id="signup-button">Signup</button>
             </a>
         </div>

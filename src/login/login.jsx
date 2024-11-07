@@ -1,8 +1,9 @@
 import React from 'react';
+import './loginStyle.css';
 
 export function Login() {
   return (
-    <main className='container-fluid bg-secondary text-center'>
+    <main>
       <div class="loginContainer">
         <h1>Login</h1>
     <form>
