@@ -2,7 +2,7 @@ import React from 'react';
 
 export function Signup() {
   return (
-    <main>
+    <section>
       <body>
         <div className="loginContainer">
         <h1>Signup</h1>
@@ -16,7 +16,7 @@ export function Signup() {
         <div className="inputGroup">
             <input type="text" id="email" placeholder="myhandle@email.com" required />
             <a href="about">
-            <button type="button" id="signup-button">Signup</button>
+            <button type="button" className='login-signup'>Signup</button>
             </a>
         </div>
         <div>
@@ -25,6 +25,6 @@ export function Signup() {
     </form>
     </div>
     </body>
-    </main>
+    </section>
   );
 }
