@@ -203,51 +203,6 @@ const recipes = [
     ]
   },
   {
-    name: "Quinoa Bowls",
-    ingredients: [
-      // { quantity: "", ingredient: "" },
-    ],
-    instructions: [
-      // "- Step 1...",
-    ],
-  },
-  {
-    name: "Sourdough Sliders (Grilled)",
-    ingredients: [
-      // { quantity: "", ingredient: "" },
-    ],
-    instructions: [
-      // "- Step 1...",
-    ],
-  },
-  {
-    name: "Arepas de Venezuela",
-    ingredients: [
-      // { quantity: "", ingredient: "" },
-    ],
-    instructions: [
-      // "- Step 1...",
-    ],
-  },
-  {
-    name: "Enchiladas",
-    ingredients: [
-      // { quantity: "", ingredient: "" },
-    ],
-    instructions: [
-      // "- Step 1...",
-    ],
-  },
-  {
-    name: "Fish Tacos",
-    ingredients: [
-      // { quantity: "", ingredient: "" },
-    ],
-    instructions: [
-      // "- Step 1...",
-    ],
-  },
-  {
     name: "Gyros",
     ingredients: [
       { quantity: "2 lbs", ingredient: "chicken breast" },
@@ -269,160 +224,18 @@ const recipes = [
       "- Assemble: Warm the pita bread, spread tzatziki sauce over each pita, then layer with chicken and chopped veggies. Serve immediately."
     ]
   },
-  {
-    name: "Smothered Chicken Burritos",
-    ingredients: [
-      // { quantity: "", ingredient: "" },
-    ],
-    instructions: [
-      // "- Step 1...",
-    ],
-  },
-  {
-    name: "Tacos",
-    ingredients: [
-      // { quantity: "", ingredient: "" },
-    ],
-    instructions: [
-      // "- Step 1...",
-    ],
-  },
-  {
-    name: "Alfredo (Light)",
-    ingredients: [
-      // { quantity: "", ingredient: "" },
-    ],
-    instructions: [
-      // "- Step 1...",
-    ],
-  },
-  {
-    name: "Alfredo (Thicc)",
-    ingredients: [
-      // { quantity: "", ingredient: "" },
-    ],
-    instructions: [
-      // "- Step 1...",
-    ],
-  },
-  {
-    name: "Baked Mac N' Cheese",
-    ingredients: [
-      // { quantity: "", ingredient: "" },
-    ],
-    instructions: [
-      // "- Step 1...",
-    ],
-  },
-  {
-    name: "Beef Stroganoff",
-    ingredients: [
-      // { quantity: "", ingredient: "" },
-    ],
-    instructions: [
-      // "- Step 1...",
-    ],
-  },
-  {
-    name: "Chicken Parmesan",
-    ingredients: [
-      // { quantity: "", ingredient: "" },
-    ],
-    instructions: [
-      // "- Step 1...",
-    ],
-  },
-  {
-    name: "Linguine and Clam Sauce",
-    ingredients: [
-      // { quantity: "", ingredient: "" },
-    ],
-    instructions: [
-      // "- Step 1...",
-    ],
-  },
-  {
-    name: "Macaroni Salad",
-    ingredients: [
-      // { quantity: "", ingredient: "" },
-    ],
-    instructions: [
-      // "- Step 1...",
-    ],
-  },
-  {
-    name: "Marinara Sauce (Spaghetti)",
-    ingredients: [
-      // { quantity: "", ingredient: "" },
-    ],
-    instructions: [
-      // "- Step 1...",
-    ],
-  },
-  {
-    name: "Butter Chicken (slow cooker opt.)",
-    ingredients: [
-      // { quantity: "", ingredient: "" },
-    ],
-    instructions: [
-      // "- Step 1...",
-    ],
-  },
-  {
-    name: "Cupbop Spoof",
-    ingredients: [
-      // { quantity: "", ingredient: "" },
-    ],
-    instructions: [
-      // "- Step 1...",
-    ],
-  },
-  {
-    name: "Curry (Chicken)",
-    ingredients: [
-      // { quantity: "", ingredient: "" },
-    ],
-    instructions: [
-      // "- Step 1...",
-    ],
-  },
-  {
-    name: "Fried Rice (Bloomquist)",
-    ingredients: [
-      // { quantity: "", ingredient: "" },
-    ],
-    instructions: [
-      // "- Step 1...",
-    ],
-  },
-  {
-    name: "Pad Kra Pow",
-    ingredients: [
-      // { quantity: "", ingredient: "" },
-    ],
-    instructions: [
-      // "- Step 1...",
-    ],
-  },
-  {
-    name: "Peanut Thai Noodles",
-    ingredients: [
-      // { quantity: "", ingredient: "" },
-    ],
-    instructions: [
-      // "- Step 1...",
-    ],
-  },
-  {
-    name: "Slow Cooker Curry (Mom's Version)",
-    ingredients: [
-      // { quantity: "", ingredient: "" },
-    ],
-    instructions: [
-      // "- Step 1...",
-    ],
-  },
-  // Add remaining recipes following the same structure
+
+  // Recipes to do:
+  // Quinoa Bowls, Sourdough Sliders, Arepas de Venezuela, Enchiladas, Fish Tacos,
+  // Smothered Chicken Burritos, Tacos, Alfredo (light), Alfredo (thick), 
+  // Baked Mac n' Cheese, Beef Stroganoff, Chicken Parmesan, Linguine and Clam Sauce,
+  // Macaroni Salad, Marinara Sauce, Butter Chicken, Cupbop Spoof, Curry, Fried Rice,
+  // Pad Kra Pow, Peanut Thai Noodles, Slow Cooker Curry, Chicken + Wild Rice Soup,
+  // Chicken Noodle Soup, Clam Chowder, Corn Chowder, Homemade Chili, Slow Cooker Beef Stew,
+  // French Bread, Gingerbread, Whole Wheat Bread, Coconut Brownies, Mocha Brownies,
+  // Microwave Mug Brownies, Truffle Brownies, Chocolate Chip Cookies, Chocolate Crinkle Cookies,
+  // No-Bake Cookies, Peanut Butter Chocolate Chip Cookies, Outrages Cookies, Chocolate Coconut Poke Cake,
+  // Sophie's Easy Chocolate Cake, Tres Leches Cake, Oreo Truffles, Rice Crispy PB Chocolate Bar Things
 ];
 
 

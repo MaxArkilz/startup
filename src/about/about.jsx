@@ -1,4 +1,6 @@
 import React from 'react';
+import RandomAdvice from './apiCall';
+import './aboutStyle.css';
 
 export function About() {
   return (
@@ -24,7 +26,7 @@ Alitora sodales dui eu ac hac tristique libero. Ut senectus habitant nisi facili
 
         </div>
         <div id="nutritional-hype-zone">
-            <p>Nutrition data will be displayed here from a 3rd party API.</p>
+            <RandomAdvice />
         </div>
     </main>
   );

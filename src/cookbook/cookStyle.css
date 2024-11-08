@@ -30,12 +30,12 @@
     position: absolute;
     transform: translateY(-5%);
     width: 300px;
-    margin-top: 20px;
+    margin-top: 10px;
     background-color: rgba(227, 210, 210, 0.9);
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
+    z-index: 10;
 }
 
 #allRecipes li {

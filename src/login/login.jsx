@@ -12,7 +12,7 @@ export function Login() {
             </div>
             <div class="inputGroup">
             <input type="password" id="password" placeholder="Enter your password" required />
-            <a href="index.html">
+            <a href="/about">
             <button type="button" className="login-signup">Login</button>
             </a>
             </div>
