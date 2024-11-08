@@ -1,11 +1,7 @@
-#servingSize {
-    font-style: italic;
-    font-weight: bold;
-}
-
 #recipeContainer {
     display: flex;
     justify-content: space-evenly;
+    margin-right: 20px;
 }
 
 #ingredients table {
@@ -26,6 +22,7 @@
 
 #instructions {
     flex: 0 0 40%;
+    margin-left: 20px;
 }
 
 #allRecipes {
@@ -52,11 +49,11 @@
     cursor: pointer;
 }
 
-#allRecipes li h3,
+/* #allRecipes li h3,
 #allRecipes li h4 {
     color: #000;
     cursor: default;
-}
+} */
 
 .recipeToggle {
     display: none;
