@@ -1,0 +1,27 @@
+.checklist {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.column {
+    width: 45%;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+label {
+    display: block;
+    padding: 8px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.checklist label {
+    background-color: #b1aaaa;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}

@@ -116,6 +116,14 @@ nav ul li {
 
 @media (max-width: 900px) {
 
+    main{
+        width: 100%;
+        background-color: #a39595cc;
+        padding: 0px;
+        margin-bottom: 0px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #000000a6;
+    }
     .menuIcon{
         display: block;
         margin-right: 20px;
