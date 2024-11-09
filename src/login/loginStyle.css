@@ -20,6 +20,19 @@
     z-index: -1;
 }
 
+.signupContainer {
+    margin: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(50%);
+    background-color: rgba(163, 149, 149, 0.663);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    width: 300px;
+    text-align: center;
+}
+
 .inputGroup {
     margin-bottom: 15px;
 }

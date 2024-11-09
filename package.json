@@ -2,10 +2,14 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start:dev": "nodemon ./server.js",
+    "start": "node ./server.js"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.1",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.5",
     "react-dom": "^18.3.1",
@@ -14,8 +18,9 @@
   "name": "startup",
   "version": "1.0.0",
   "description": "Creating healthy meal plans for a month or two can be a difficult task. Sometimes its hard to think of all the recipes you know and create a shopping list accordingly. What if there was an intuitive program where you and your family could plan together and then a shopping list was automatically created. Something like this could help you to eat healthier, get everyone excited about meals throughout the month, and make the shopping experience much quicker.",
-  "main": "index.js",
+  "main": "server.js",
   "devDependencies": {
+    "nodemon": "^3.1.7",
     "vite": "^5.4.10"
   },
   "keywords": [],

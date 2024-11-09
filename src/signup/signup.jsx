@@ -4,7 +4,7 @@ export function Signup() {
   return (
     <section>
       <body>
-        <div className="loginContainer">
+        <div className="signupContainer">
         <h1>Signup</h1>
     <form>
         <div className="inputGroup">
