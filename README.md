@@ -67,4 +67,13 @@ An optional third page would display all recipes in the cookbook with ingredient
 - Properly styled CSS application images
   - *completed*
 
+### React
 
+- Bundled using Vite
+  - *completed*
+- Multiple react components that implement or mock all app functionality
+  - Cookbook dynamically pulls recipe from an array to populate page
+- React router
+  - *completed*
+- React hooks
+  - *completed*

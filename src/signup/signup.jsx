@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink, Routes } from 'react-router-dom';
 
 export function Signup() {
   return (
@@ -15,9 +16,9 @@ export function Signup() {
         </div>
         <div className="inputGroup">
             <input type="text" id="email" placeholder="myhandle@email.com" required />
-            <a href="about">
+            <NavLink to="/about">
             <button type="button" className='login-signup'>Signup</button>
-            </a>
+            </NavLink>
         </div>
         <div>
             <p>Login info will be pushed into database.</p>

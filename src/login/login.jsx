@@ -1,5 +1,6 @@
 import React from 'react';
 import './loginStyle.css';
+import { NavLink } from 'react-router-dom';
 
 export function Login() {
   return (
@@ -12,11 +13,11 @@ export function Login() {
             </div>
             <div class="inputGroup">
             <input type="password" id="password" placeholder="Enter your password" required />
-            <a href="/about">
+            <NavLink to="/about">
             <button type="button" className="login-signup">Login</button>
-            </a>
+            </NavLink>
             </div>
-            <p>No account? No problem! Click <a href="/signup">here</a> to sign up!</p>
+            <p>No account? No problem! Click <NavLink to="/signup">here</NavLink> to sign up!</p>
         <div>
             <p>Login info will be pulled from database.</p>
         </div>

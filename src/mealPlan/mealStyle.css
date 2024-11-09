@@ -52,11 +52,6 @@
     font-size: 1.5em;
 }
 
-.calendarGrid div:hover {
-    background-color: #b1aaaa;
-    cursor: pointer;
-}
-
 @media (max-width: 900px) {
 
     .calendarMain{
