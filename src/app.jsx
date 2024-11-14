@@ -9,12 +9,16 @@ import {Cookbook} from "./cookbook/cookbook";
 import {Shopping} from "./shopping/shopping";
 import {Login} from "./login/login";
 import { Signup } from './signup/signup';
+import { AuthState } from './login/authState'
 import logo from './resippyIcon.png';
 
 export default function App() {
+    const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
+    const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
+    const [authState, setAuthState] = React.useState(currentAuthState);
+
     return (
         <BrowserRouter>
-            <>
             <header>
                 <div>
                     <NavLink to="/" className='logo'>
@@ -29,10 +33,15 @@ export default function App() {
                         <span></span>
                     </label>
                     <ul className='siteNavigation'>
-                    
-                        <li><NavLink className='navbar' to="/mealplan">Meal Plan</NavLink></li>
-                        <li><NavLink className='navbar' to="/cookbook">Cookbook</NavLink></li>
-                        <li><NavLink className='navbar' to="/shopping">Shopping List</NavLink></li>
+                        {authState === AuthState.Authenticated && (
+                            <li><NavLink className='navbar' to="/mealplan">Meal Plan</NavLink></li>
+                        )}
+                        {authState === AuthState.Authenticated && (
+                            <li><NavLink className='navbar' to="/cookbook">Cookbook</NavLink></li>
+                        )}
+                        {authState === AuthState.Authenticated && (
+                            <li><NavLink className='navbar' to="/shopping">Shopping List</NavLink></li>
+                        )}
                         <li><NavLink className='navbar' to="/about">About</NavLink></li>
                         <li>
                             <NavLink className='loginLink' to='/'><button className='loginButton'>Login</button></NavLink>
@@ -41,7 +50,17 @@ export default function App() {
                 </nav>
             </header>
             <Routes>
-                <Route path="/" element={<Login />} />
+                <Route path="/" element={<Login 
+                    userName={userName}
+                    authState={authState}
+                    onAuthChange={(userName, authState) => {
+                        setAuthState(authState);
+                        setUserName(userName);
+                    }}
+                    />
+                    }
+                    exact
+                     />
                 <Route path="/mealplan" element={<MealPlan />} />
                 <Route path="/cookbook" element={<Cookbook />} />
                 <Route path="/shopping" element={<Shopping/>} />
@@ -49,9 +68,13 @@ export default function App() {
                 <Route path="/signup" element={<Signup />} />
                 <Route path='*' element={<NotFound />} />
             </Routes>
-            </>
+
+            <footer>
+                <span>Created by Abrahm Bloomquist</span>
+                <a href='https://github.com/MaxArkilz/startup'>GitHub Source</a>
+            </footer>
         </BrowserRouter>
-    )
+    );
 }
 
 function NotFound() {
