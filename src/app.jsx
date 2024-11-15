@@ -70,9 +70,11 @@ export default function App() {
             </Routes>
 
             <footer>
-                <span>Created by Abrahm Bloomquist</span>
-                <a href='https://github.com/MaxArkilz/startup'>GitHub Source</a>
-            </footer>
+                <span className='footerWords'>Created by Abrahm Bloomquist</span>
+                <div className='footerWords'>
+                    <a href='https://github.com/MaxArkilz/startup'>GitHub Source</a>
+                </div>
+           </footer>
         </BrowserRouter>
     );
 }

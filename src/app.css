@@ -54,6 +54,36 @@ main {
     font: 1em verdana;
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between; /* Spreads items across the width */
+    align-items: center; /* Vertically centers items */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer span {
+    margin-left: 20px;
+    text-align: left;
+}
+
+footer div {
+    color: #ddd;
+    text-align: right;
+    margin-right: 20px;
+}
+
+footer div a {
+    text-decoration: none;
+    color: #ddd;
+}
+
 
 .siteNavigation {
     display: flex;

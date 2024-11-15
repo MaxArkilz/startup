@@ -35,20 +35,18 @@ export function Unauthenticated(props) {
 
   return (
     <>
-      <div>
-        <div className='input-group mb-3'>
-          <span className='input-group-text'>@</span>
-          <input className='form-control' type='text' value={userName} onChange={(e) => setUserName(e.target.value)} placeholder='your@email.com' />
+      <div className='loginContainer'>
+        <div className='inputGroup'>
+          <input type='text' id='username' value={userName} onChange={(e) => setUserName(e.target.value)} placeholder='Enter you username' required />
         </div>
-        <div className='input-group mb-3'>
-          <span className='input-group-text'>🔒</span>
-          <input className='form-control' type='password' onChange={(e) => setPassword(e.target.value)} placeholder='password' />
+        <div className='inputGroup'>
+          <input type='password' onChange={(e) => setPassword(e.target.value)} placeholder='password' />
         </div>
         <Button variant='primary' onClick={() => loginUser()} disabled={!userName || !password}>
           Login
         </Button>
         <Button variant='secondary' onClick={() => createUser()} disabled={!userName || !password}>
-          Create
+          Signup
         </Button>
       </div>
 

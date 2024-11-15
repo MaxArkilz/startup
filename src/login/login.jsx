@@ -1,31 +1,36 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './loginStyle.css';
-import { NavLink } from 'react-router-dom';
 import { Unauthenticated } from './unauthenticated';
 import { Authenticated } from './authenticated';
 import { AuthState } from './authState';
 
-export function Login() {
+export function Login({ userName, authState, onAuthChange }) {
+
+  // const [authState, setAuthState] = useState(AuthState.Unknown);
+  // const [userName, setUserName] = useState('');
+
+  // const onAuthChange = (loginUserName, newAuthState) => {
+  //   setUserName(loginUserName);
+  //   setAuthState(newAuthState);
+  // };
+
   return (
-    <section id='loginMain'>
-      <div class="loginContainer">
-        <h1>Login</h1>
-    <form>
-        <div className="inputGroup">
-            <input type="text" id="username" placeholder="Enter your username" required />
-            </div>
-            <div class="inputGroup">
-            <input type="password" id="password" placeholder="Enter your password" required />
-            <NavLink to="/about">
-            <button type="button" className="login-signup">Login</button>
-            </NavLink>
-            </div>
-            <p>No account? No problem! Click <NavLink to="/signup">here</NavLink> to sign up!</p>
-        <div>
-            <p>Login info will be pulled from database.</p>
-        </div>
-    </form>
-    </div>
+    <section className='loginMain'>
+      <div>
+        {authState !== AuthState.Unknown && <h1>Welcome to your Meal Plan Assistant</h1>}
+
+        {authState === AuthState.Authenticated && (
+          <Authenticated userName={userName} onLogout={() => onAuthChange(userName, AuthState.Unauthenticated)} />
+        )}
+        {authState === AuthState.Unauthenticated && (
+          <Unauthenticated
+            userName={userName}
+            onLogin={(loginUserName) => {
+              onAuthChange(loginUserName, AuthState.Authenticated);
+            }}
+          />
+        )}
+      </div>
     </section>
   );
 }
