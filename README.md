@@ -77,3 +77,15 @@ An optional third page would display all recipes in the cookbook with ingredient
   - *completed*
 - React hooks
   - *completed*
+
+### Service
+- Create an HTTP service using Node.js and Express
+  - *completed*
+- Frontend served up using Express static middleware
+  - *completed*
+- Your frontend calls third party service endpoints
+  - *Random quote API on About page*
+- Your backend provides service endpoints
+  - *modified Simon Authentication endpoint to fit with website*
+- Your frontend calls your service endpoints
+  - *successful call on frontend*
