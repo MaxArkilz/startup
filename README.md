@@ -89,3 +89,18 @@ An optional third page would display all recipes in the cookbook with ingredient
   - *modified Simon Authentication endpoint to fit with website*
 - Your frontend calls your service endpoints
   - *successful call on frontend*
+
+
+### Login
+- Simon Deployed, Github link in footer, README updated, history of at least 10 commits.
+  - *Completed*
+- Supports new user registration
+  - *Completed*
+- Supports existing user authentication
+  - *Completed*
+- Stores application data in MongoDB
+  - Stored in cluster0.bjrbj.mongodb.net
+- Stores and retrieves credentials in MongoDB
+  - Passwords hashed and stored, as well as retrieved successfully
+- Restricts application functionality based upon authentication
+  - Only welcome page and about page visable before authentication
