@@ -2,6 +2,7 @@ import React from 'react';
 import './app.css';
 import { NavLink, Routes } from 'react-router-dom';
 import { BrowserRouter, Route } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {About} from "./about/about";
 import {MealPlan} from "./mealPlan/mealplan";
 import {Cookbook} from "./cookbook/cookbook";
