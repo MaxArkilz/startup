@@ -1,5 +1,4 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
 import { NavLink, Routes } from 'react-router-dom';
 import { BrowserRouter, Route } from "react-router-dom";
