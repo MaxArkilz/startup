@@ -74,7 +74,7 @@ An optional third page would display all recipes in the cookbook with ingredient
 - Multiple react components that implement or mock all app functionality
   - Cookbook dynamically pulls recipe from an array to populate page
 - React router
-  - *completed*
+  - *used 'UseState' hook on Cookbook page to change recipe display dynamically* 
 - React hooks
   - *completed*
 
