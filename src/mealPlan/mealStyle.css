@@ -1,4 +1,4 @@
-.calendarMain {
+/* .calendarMain {
     display: flex;
     gap: 20px;
     padding: 20px;
@@ -57,4 +57,66 @@
     .calendarMain{
         display: block;
     }
-}
+} */
+
+.calendarMain {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 80vw;
+    margin: 0 auto;
+  }
+  
+  .calendarStack {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 60%;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .calendarDiv {
+    width: 100%;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  .empty {
+    background-color: #f9f9f9;
+  }
+  
+  button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  .draggableItems {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
