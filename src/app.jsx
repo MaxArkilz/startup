@@ -63,7 +63,7 @@ export default function App() {
                      />
                 <Route path="/mealplan" element={<MealPlan />} />
                 <Route path="/cookbook" element={<Cookbook />} />
-                <Route path="/shopping" element={<Shopping/>} />
+                <Route path="/shopping" element={<Shopping userName={userName} />} />
                 <Route path="/about" element={<About/>} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path='*' element={<NotFound />} />

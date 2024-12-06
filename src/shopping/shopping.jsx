@@ -1,10 +1,11 @@
 import React from 'react';
 import './shopStyle.css';
+import { Chat } from './Chat';
 
-export function Shopping() {
+export function Shopping( {userName}) {
   return (
     <main>
-      <div className="checklist">
+      {/* <div className="checklist">
       <div className="column">
         <h4>Meat</h4>
         <label><input type="checkbox" /> 2 lbs. chicken</label><br />
@@ -58,7 +59,11 @@ export function Shopping() {
         <label><input type="checkbox" /> 2 tsp beef bouillon</label><br />
         <label><input type="checkbox" /> 1 1/2 TBSP worcestershire</label><br />
       </div>
-    </div>
+    </div> */}
+
+    <Chat username={userName} />
+      
   </main>
+  
   );
 }

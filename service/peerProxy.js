@@ -7,23 +7,33 @@ function peerProxy(httpServer) {
 
   // Handle the protocol upgrade from HTTP to WebSocket
   httpServer.on('upgrade', (request, socket, head) => {
+      const username = extractUsername(request);
+      if (!username) {
+        socket.destroy();
+        return;
+      }
+
     wss.handleUpgrade(request, socket, head, function done(ws) {
-      wss.emit('connection', ws, request);
+      wss.emit('connection', ws, request, username);
     });
   });
 
   // Keep track of all the connections so we can forward messages
   let connections = [];
 
-  wss.on('connection', (ws) => {
-    const connection = { id: uuid.v4(), alive: true, ws: ws };
+  wss.on('connection', (ws, request, username) => {
+    const connection = { id: uuid.v4(), alive: true, ws: ws, username:username };
     connections.push(connection);
 
     // Forward messages to everyone except the sender
     ws.on('message', function message(data) {
+        const messageObj = JSON.parse(data);
+        messageObj.username = connection.username;
+        const outgoingMessage = JSON.stringify(messageObj);
+
       connections.forEach((c) => {
         if (c.id !== connection.id) {
-          c.ws.send(data);
+          c.ws.send(outgoingMessage);
         }
       });
     });
@@ -55,6 +65,10 @@ function peerProxy(httpServer) {
       }
     });
   }, 10000);
+}
+
+function extractUsername(request) {
+  
 }
 
 module.exports = { peerProxy };
