@@ -58,12 +58,17 @@ export default function App() {
                         setUserName(userName);
                     }}
                     />
-                    }
+                    }t
                     exact
                      />
                 <Route path="/mealplan" element={<MealPlan />} />
                 <Route path="/cookbook" element={<Cookbook />} />
-                <Route path="/shopping" element={<Shopping userName={userName} />} />
+                <Route path="/shopping" element={<Shopping userName={userName}
+                    authState={authState}
+                    onAuthChange={(userName, authState) => {
+                        setAuthState(authState);
+                        setUserName(userName);
+                    }}/>} />
                 <Route path="/about" element={<About/>} />
                 <Route path="/signup" element={<Signup />} />
                 <Route path='*' element={<NotFound />} />

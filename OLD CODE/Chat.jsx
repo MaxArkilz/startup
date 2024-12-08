@@ -7,26 +7,10 @@ export function Chat({ username }) {
     const chatMessagesRef = useRef(null);
 
     useEffect(() => {
-        const getWebSocketUrl = () => {
-            try {
-                const currentPageUrl = window.location.href;
-                const protocol = currentPageUrl.startsWith('https') ? 'wss' : 'ws';
-                const urlParts = currentPageUrl.split('://');
-                if (urlParts.length < 2) {
-                    throw new Error('Invalid URL format.');
-                }
-                const hostAndPort = urlParts[1];
-                const path = '/websocket';
-                return `${protocol}://${hostAndPort}${path}`;
-            } catch (error) {
-                console.error('Error constructing WebSocket URL:', error);
-                return '';
-            }
-        };
+        let port = window.location.port;
+        const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
+        socketRef.current = new WebSocket(`${protocol}://${window.location.hostname}:${port}/ws`);
 
-        const websocketUrl = getWebSocketUrl();
-        if (websocketUrl) {
-            socketRef.current = new WebSocket(websocketUrl);
 
             socketRef.current.onopen = () => console.log('WebSocket connected');
             socketRef.current.onmessage = (event) => {
@@ -35,7 +19,6 @@ export function Chat({ username }) {
             };
             socketRef.current.onerror = (error) => console.error('WebSocket error:', error);
             socketRef.current.onclose = () => console.log('WebSocket closed');
-        }
 
         // Cleanup function
         return () => {

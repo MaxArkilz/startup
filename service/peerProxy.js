@@ -1,74 +1,28 @@
-const { WebSocketServer } = require('ws');
-const uuid = require('uuid');
+const WebSocket = require('ws');
 
-function peerProxy(httpServer) {
-  // Create a websocket object
-  const wss = new WebSocketServer({ noServer: true });
+// Use environment variable or default to port 8080
+const PORT = process.env.PORT || 8080;
 
-  // Handle the protocol upgrade from HTTP to WebSocket
-  httpServer.on('upgrade', (request, socket, head) => {
-      const username = extractUsername(request);
-      if (!username) {
-        socket.destroy();
-        return;
-      }
+const wss = new WebSocket.Server({ port: PORT });
 
-    wss.handleUpgrade(request, socket, head, function done(ws) {
-      wss.emit('connection', ws, request, username);
-    });
-  });
 
-  // Keep track of all the connections so we can forward messages
-  let connections = [];
 
-  wss.on('connection', (ws, request, username) => {
-    const connection = { id: uuid.v4(), alive: true, ws: ws, username:username };
-    connections.push(connection);
+wss.on('connection', (ws) => {
+  console.log('Client connected');
 
-    // Forward messages to everyone except the sender
-    ws.on('message', function message(data) {
-        const messageObj = JSON.parse(data);
-        messageObj.username = connection.username;
-        const outgoingMessage = JSON.stringify(messageObj);
-
-      connections.forEach((c) => {
-        if (c.id !== connection.id) {
-          c.ws.send(outgoingMessage);
-        }
+  ws.on('message', (message) => {
+      console.log(`Received: ${message}`);
+      // Broadcast the message to all clients
+      wss.clients.forEach((client) => {
+          if (client.readyState === WebSocket.OPEN) {
+              client.send(message);
+          }
       });
-    });
-
-    // Remove the closed connection so we don't try to forward anymore
-    ws.on('close', () => {
-      const pos = connections.findIndex((o, i) => o.id === connection.id);
-
-      if (pos >= 0) {
-        connections.splice(pos, 1);
-      }
-    });
-
-    // Respond to pong messages by marking the connection alive
-    ws.on('pong', () => {
-      connection.alive = true;
-    });
   });
 
-  // Keep active connections alive
-  setInterval(() => {
-    connections.forEach((c) => {
-      // Kill any connection that didn't respond to the ping last time
-      if (!c.alive) {
-        c.ws.terminate();
-      } else {
-        c.alive = false;
-        c.ws.ping();
-      }
-    });
-  }, 10000);
-}
+  ws.on('close', () => {
+      console.log('Client disconnected');
+  });
+});
 
-function extractUsername(request) {
-  
-}
-
-module.exports = { peerProxy };
+console.log(`WebSocket server is running on ws://localhost:${PORT}`);
