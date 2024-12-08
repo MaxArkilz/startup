@@ -104,3 +104,14 @@ An optional third page would display all recipes in the cookbook with ingredient
   - Passwords hashed and stored, as well as retrieved successfully
 - Restricts application functionality based upon authentication
   - Only welcome page and about page visable before authentication
+
+### WebSocket
+- Simon Deployed, Github link in footer, README updated, history of at least 10 commits.
+- Backend listens for WebSocket connection.
+  - *peerProxy.js file listens for WebSocket connection*
+- Frontend makes WebSocket Connection
+  - *On shopping page, a websocket test button shows websocket connection status*
+- Data sent over WebSocket
+  - *Chat feature allows anyone on the page to talk with each other.*
+- All visable elements are working.
+  - *Still working on getting drag and drop to function properly on meal plan.*

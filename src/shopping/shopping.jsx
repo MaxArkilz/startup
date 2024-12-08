@@ -18,6 +18,7 @@ export function Shopping( {userName}) {
       </div>
     </div>
     <button onClick={checkConnectionStatus}>Check WebSocket</button>
+    
     <Chat />
       
   </main>

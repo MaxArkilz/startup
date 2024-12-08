@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const protocol = location.protocol === 'https:' ? 'wss' : 'ws';
+const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
 const ws = new WebSocket(`${protocol}://${location.hostname}:8080`);
 
 export function Chat() {
