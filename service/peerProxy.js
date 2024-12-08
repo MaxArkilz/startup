@@ -1,26 +1,20 @@
 const { WebSocketServer } = require('ws');
 const uuid = require('uuid');
 
-
-
 function peerProxy(httpServer) {
-  // Create a websocket object
+  // Create a WebSocket server attached to the existing HTTP/HTTPS server
+  const wss = new WebSocketServer({ noServer: true });
 
-  const PORT = process.env.PORT || 8080;
-
-  const wss = new WebSocketServer({ port: PORT });
-
-  
-  console.log(`WebSocket server is running on ws://localhost:${PORT}`);
+  console.log(`WebSocket server is running`);
 
   // Handle the protocol upgrade from HTTP to WebSocket
   httpServer.on('upgrade', (request, socket, head) => {
-    wss.handleUpgrade(request, socket, head, function done(ws) {
+    wss.handleUpgrade(request, socket, head, (ws) => {
       wss.emit('connection', ws, request);
     });
   });
 
-  // Keep track of all the connections so we can forward messages
+  // Keep track of all connections so we can forward messages
   let connections = [];
 
   wss.on('connection', (ws) => {
@@ -29,7 +23,7 @@ function peerProxy(httpServer) {
     console.log('Client connected');
 
     // Forward messages to everyone except the sender
-    ws.on('message', function message(data) {
+    ws.on('message', (data) => {
       connections.forEach((c) => {
         if (c.id !== connection.id) {
           c.ws.send(data);
@@ -39,7 +33,7 @@ function peerProxy(httpServer) {
 
     // Remove the closed connection so we don't try to forward anymore
     ws.on('close', () => {
-      const pos = connections.findIndex((o, i) => o.id === connection.id);
+      const pos = connections.findIndex((o) => o.id === connection.id);
       console.log('Client disconnected');
 
       if (pos >= 0) {
@@ -66,6 +60,5 @@ function peerProxy(httpServer) {
     });
   }, 10000);
 }
-
 
 module.exports = { peerProxy };
