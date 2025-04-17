@@ -78,7 +78,7 @@ export default function App() {
                     // }}/>} />
                 />} />
                 <Route path="/about" element={<About/>} />
-                <Route path="/signup" element={<Signup />} />
+                {/* <Route path="/signup" element={<Signup />} /> */}
                 <Route path='*' element={<NotFound />} />
             </Routes>
 
