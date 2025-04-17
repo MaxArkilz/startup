@@ -49,9 +49,9 @@ export default function App() {
                         <li><NavLink className='navbar' to="/cookbook">Cookbook</NavLink></li>
                         <li><NavLink className='navbar' to="/shopping">Shopping List</NavLink></li>
                         <li><NavLink className='navbar' to="/about">About</NavLink></li>
-                        <li>
+                        {/* <li>
                             <NavLink className='loginLink' to='/'><button className='loginButton'>Login</button></NavLink>
-                        </li>
+                        </li> */}
                     </ul>
                 </nav>
             </header>
