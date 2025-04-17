@@ -1,12 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import './shopStyle.css';
-import { webTest, checkConnectionStatus } from './webSocket';
-import { Chat } from './chatCode';
 
 export function Shopping( {userName}) {
-  useEffect(() => {
-    webTest();
-  }, []);
 
   return (
     <main>
@@ -17,9 +12,6 @@ export function Shopping( {userName}) {
         <label><input type="checkbox" /> 2 lb. stew beef</label><br />
       </div>
     </div>
-    <button onClick={checkConnectionStatus}>Check WebSocket</button>
-    
-    <Chat />
       
   </main>
   
